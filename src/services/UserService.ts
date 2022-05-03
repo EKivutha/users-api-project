@@ -5,6 +5,9 @@ const getAll = () => {
 const get = (id: Number) => {
   return http.get(`/users/${id}`);
 };
+const update = (id:Number, data:any) => {
+  return http.put(`/users/${id}`, data);
+};
 const findByTitle = async (title: String) => {
   const result = await http.get(`/users?name=${title}`)
   console.log(result, title)
@@ -13,6 +16,7 @@ const findByTitle = async (title: String) => {
 const UserService = {
   getAll,
   get,
+  update,
   findByTitle
 };
 export default UserService;
