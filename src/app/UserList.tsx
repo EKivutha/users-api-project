@@ -15,9 +15,11 @@ const UsersList = () => {
   const [searchTitle, setSearchTitle] = useState("");
   const users = useSelector((state:any) => state.users);
   const dispatch = useDispatch();
+
   useEffect(() => {
     dispatch<any>(retrieveUsers());
   }, [dispatch]);
+  
   const onChangeSearchTitle = (e:any )=> {
     const searchTitle = e.target.value;
     console.log("Search title", searchTitle)
