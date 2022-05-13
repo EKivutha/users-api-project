@@ -7,6 +7,7 @@ import UsersTable from './app/UserTable';
 import DenseAppBar from './app/AppBar';
 import UserPostList from './app/UserPostList';
 import UserPostCard from './app/UserPostCard';
+import ApartmentList from './app/AppartmentList';
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
      
       <Routes>
       <Route path="/" element={<UsersTable />} />
+      <Route path="/apartments" element={<ApartmentList />} />
       {/* <Route path="invoices" element={<Invoices />} /> */}
       <Route path="posts/:userId" element={<UserPostList/>} />
       <Route path="post/:id" element={<UserPostCard />} />
